@@ -3,7 +3,7 @@
 __author__ = 'srebrny'
 __copyright__ = u'Copyright (c) 2010 Tomasz Świderski'
 
-import Image, ImageDraw, ImageFont
+import Image, ImageDraw, ImageFont, ImageColor
 import sys
 
 from decorators import BackgroundDecorator, JustifyTextDecorator
@@ -16,6 +16,17 @@ DZHK = []
 PRZYGOTOWANIE_RANO = []
 PRZYGOTOWANIE_WIECZOR = []
 SOO = []  # sprzątanie / obiad / odpoczynek
+
+dc = {
+    "PRZYGOTOWANIE": ImageColor.getrgb("#00ccff"),
+    "FIRMA": ImageColor.getrgb("#6666fc"),
+    "PRACA i Obiad": ImageColor.getrgb("#ff3299"),
+    "SPRZATANIE/OBIAD/ODPOCZYNEK": ImageColor.getrgb("#013461"),
+    "DZHK": ImageColor.getrgb("#ff9899"),
+    "SEN": ImageColor.getrgb("#039d01"),
+    "FIRMA - ROZWÓJ": ImageColor.getrgb("#6666fc"),
+
+}
 
 day1 = {
     "header": "Plan dnia - Normalny",
@@ -118,9 +129,14 @@ class DayPlan(object):
         self.draw = ImageDraw.Draw(self.im)
         # margins Left, upper, right, bottom
         self.marginsCols = {"size": 320}
-        self.marginsHeader = {"left": 15, "top": 52, "right": 25, "bottom": 25}
+        self.marginsHeader = {"left": 20, "top": 25, "right": 25, "bottom": 25}
         self.marginsRows = {"left": 25, "top": 52, "right": 25, "bottom": 25}
         self.padding_cols = 18
+
+        # FOR TRANSLATE COLORS
+        self.colors = ImageColor
+
+        self.header_bg_color = self.colors.getrgb("#3e35e8")
 
         #
         # Font Settings
@@ -128,38 +144,59 @@ class DayPlan(object):
         self.HeaderFont = ImageFont.truetype("./fonts/NotoSans-BoldItalic.ttf", 20)
         self.TextFont = ImageFont.truetype("./fonts/NotoSans-Regular.ttf", 15)
 
-        self.TextFontFill_hour = (255, 255, 255)
-        self.TextFontFill_text = (255, 255, 255)
+        self.TextFontFill_hour = self.colors.getrgb("#fff")
+        self.TextFontFill_text = self.colors.getrgb("#fff")
 
     def setData(self, *kargs):
         self.col_i = 0
         for day in kargs:
-            HeaderPos = (
-                self.marginsHeader["left"] + (self.marginsCols["size"] * self.col_i + 20 + self.marginsHeader["right"]),
-                23)
-            print("Marginesy dla kolumny %i " % self.col_i, HeaderPos)
 
+            column_x_pos = (self.marginsCols["size"] * self.col_i)
+
+            HeaderBox = [
+                (
+                    self.marginsHeader["left"] + column_x_pos,
+                    self.marginsHeader["top"]
+                ),
+                (
+                    self.marginsHeader["left"] + column_x_pos + 300 + 5,
+                    52
+                )
+            ]
+            size_x, size_y = self.draw.textsize(day["header"].decode("utf-8"), font=self.HeaderFont)
+
+            size_col_x = self.marginsHeader["left"] + column_x_pos + 300 + 5
+
+            padding_size = column_x_pos + (size_col_x - column_x_pos - size_x) / 2
+
+            HeaderPos = (
+                self.marginsHeader["left"] + padding_size,
+                23)
+
+            # Border for hour coll
+            self.draw.rectangle(HeaderBox, fill=self.colors.getrgb("#fff"), outline=(128, 128, 128))
             self.draw.text(HeaderPos,
                            day["header"].decode("utf-8"), font=self.HeaderFont,
-                           fill=(240, 240, 0))
+                           fill=self.header_bg_color)
+
             self.row_i = 0
             for row in day["hours"]:
                 RowNumPos = (
-                    self.marginsRows["left"] + (self.marginsCols["size"] * self.col_i),
+                    self.marginsRows["left"] + column_x_pos,
                     self.marginsRows["top"] + (self.row_i * 22)
                 )
 
                 RowTexPos = (
-                    self.marginsRows["left"] + 30 + (self.marginsCols["size"] * self.col_i),
+                    self.marginsRows["left"] + 30 + column_x_pos,
                     self.marginsRows["top"] + (self.row_i * 22)
                 )
 
-                self.draw_row(row["hour"], row["text"], background=(0, 0, 128),
+                self.draw_row(row["hour"], row["text"], background=dc.get(row["text"]),
                               RowNumPos=RowNumPos, RowTexPos=RowTexPos, justify=True)
                 self.row_i += 1
-                # break
 
             self.col_i += 1
+            # break
 
     @BackgroundDecorator
     @JustifyTextDecorator

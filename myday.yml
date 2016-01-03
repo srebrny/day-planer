@@ -1,0 +1,115 @@
+---
+
+name: {
+ text: "Nazwa całego planu",
+ background: "#00ccff",
+ pos: [10, 50],
+ margins: {
+     "left": 20,
+     "top": 20,
+     "right": 30,
+     "bottom": 50
+   }
+}
+
+
+margins: "For feature things"
+hour_start: 5 # in 24 hour system
+#
+# Lists of all procedures
+#
+procedures: {
+    "PRZYGOTOWANIE": "#00ccff",
+    "FIRMA": "#6666fc","#00ccff",
+    "PRACA i Obiad": "#ff3299",
+    "SPRZATANIE/OBIAD/ODPOCZYNEK": "#013461",
+    "DZHK": "#ff9899",
+    "SEN": "#039d01",
+    "FIRMA - ROZWOJ": "#6666fc",
+    }
+background: "#000000"
+
+
+---
+header: "Plan dnia - Normalny"
+hours: [
+        {"hour": "05", "text": "PRZYGOTOWANIE"},
+        {"hour": "06", "text": "FIRMA"},
+        {"hour": "07", "text": "FIRMA"},
+        {"hour": "08", "text": "PRACA i Obiad"},
+        {"hour": "09", "text": "PRACA i Obiad"},
+        {"hour": "10", "text": "PRACA i Obiad"},
+        {"hour": "11", "text": "PRACA i Obiad"},
+        {"hour": "12", "text": "PRACA i Obiad"},
+        {"hour": "13", "text": "PRACA i Obiad"},
+        {"hour": "14", "text": "PRACA i Obiad"},
+        {"hour": "15", "text": "PRACA i Obiad"},
+        {"hour": "16", "text": "PRACA i Obiad"},
+        {"hour": "17", "text": "PRACA i Obiad"},
+        {"hour": "18", "text": "SPRZATANIE/OBIAD/ODPOCZYNEK"},
+        {"hour": "19", "text": "DZHK"},
+        {"hour": "20", "text": "FIRMA"},
+        {"hour": "21", "text": "FIRMA"},
+        {"hour": "22", "text": "PRZYGOTOWANIE"},
+        {"hour": "23", "text": "SEN"},
+        {"hour": "00", "text": "SEN"},
+        {"hour": "01", "text": "SEN"},
+        {"hour": "02", "text": "SEN"},
+        {"hour": "03", "text": "SEN"},
+        {"hour": "04", "text": "SEN"}]
+
+---
+header: "Plan dnia - Sobota"
+hours: [
+        {"hour": "05", "text": "SEN"},
+        {"hour": "06", "text": "SEN"},
+        {"hour": "07", "text": "SEN"},
+        {"hour": "08", "text": "SEN"},
+        {"hour": "09", "text": "PRZYGOTOWANIE"},
+        {"hour": "10", "text": "FIRMA"},
+        {"hour": "11", "text": "FIRMA"},
+        {"hour": "12", "text": "FIRMA"},
+        {"hour": "13", "text": "FIRMA"},
+        {"hour": "14", "text": "FIRMA"},
+        {"hour": "15", "text": "FIRMA"},
+        {"hour": "16", "text": "FIRMA"},
+        {"hour": "17", "text": "SPRZATANIE/OBIAD/ODPOCZYNEK"},
+        {"hour": "18", "text": "DZHK"},
+        {"hour": "19", "text": "DZHK"},
+        {"hour": "20", "text": "DZHK"},
+        {"hour": "21", "text": "DZHK"},
+        {"hour": "22", "text": "DZHK"},
+        {"hour": "23", "text": "DZHK"},
+        {"hour": "00", "text": "DZHK"},
+        {"hour": "01", "text": "PRZYGOTOWANIE"},
+        {"hour": "02", "text": "SEN"},
+        {"hour": "03", "text": "SEN"},
+        {"hour": "04", "text": "SEN"}]
+
+---
+header: "Plan dnia - Niedziela"
+hours: [
+        {"hour": "05", "text": "SEN"},
+        {"hour": "06", "text": "SEN"},
+        {"hour": "07", "text": "SEN"},
+        {"hour": "08", "text": "SEN"},
+        {"hour": "09", "text": "PRZYGOTOWANIE"},
+        {"hour": "10", "text": "FIRMA - ROZWOJ"},
+        {"hour": "11", "text": "FIRMA - ROZWOJ"},
+        {"hour": "12", "text": "FIRMA - ROZWOJ"},
+        {"hour": "13", "text": "FIRMA - ROZWOJ"},
+        {"hour": "14", "text": "FIRMA - ROZWOJ"},
+        {"hour": "15", "text": "FIRMA - ROZWOJ"},
+        {"hour": "16", "text": "FIRMA - ROZWOJ"},
+        {"hour": "17", "text": "SPRZATANIE/OBIAD/ODPOCZYNEK"},
+        {"hour": "18", "text": "DZHK"},
+        {"hour": "19", "text": "DZHK"},
+        {"hour": "20", "text": "DZHK"},
+        {"hour": "21", "text": "DZHK"},
+        {"hour": "22", "text": "DZHK"},
+        {"hour": "23", "text": "DZHK"},
+        {"hour": "00", "text": "DZHK"},
+        {"hour": "01", "text": "PRZYGOTOWANIE"},
+        {"hour": "02", "text": "SEN"},
+        {"hour": "03", "text": "SEN"},
+        {"hour": "04", "text": "SEN"}]

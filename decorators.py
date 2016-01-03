@@ -15,7 +15,7 @@ def BackgroundDecorator(f):
                 ),
                 (
                     self.marginsRows["left"] + (self.marginsCols["size"] * self.col_i) + 22,
-                    self.marginsRows["top"] + (self.row_i * 22) + 24
+                    self.marginsRows["top"] + (self.row_i * 22) + 22
                 )
             ]
 

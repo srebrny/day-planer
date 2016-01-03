@@ -23,7 +23,8 @@ procedureTable: {
      "top": 20,
      "right": 35, # size x
      "bottom": 0 # size y fix it!
-   }
+  },
+  fontSize: 12
 }
 
 margins: "For feature things"
@@ -32,49 +33,57 @@ hour_start: 5 # in 24 hour system
 # Lists of all procedures
 #
 procedures: {
-    "PRZYGOTOWANIE": {
+    "PRZYGOTOWANIE RANO": {
       "color":"#00ccff",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "Pobódka, umycie się, modlitwa, Plan na dzień, Lista",
+      "question": ""
+    },
+    "PRZYGOTOWANIE WIECZOR": {
+      "color":"#00ccff",
+      "desc": "Ułożenie rzeczy na właściwych miejscach, umycie naczyń, Przebadanie dnia",
+      "question": ""
     },
     "FIRMA": {
       "color":"#6666fc",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "",
+      "question": "Co przyniesie mi najwięcej kasy bądź
+"
     },
     "PRACA i Obiad":{
       "color": "#ff3299",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "Praca w ^^^^^^",
+      "question": ""
     },
     "SPRZATANIE/OBIAD/ODPOCZYNEK": {
       "color":"#013461",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "",
+      "question": ""
     },
     "DZHK": {
       "color":"#ff9899",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "DOM / ZYCIE / HOBBY / KSIAZKA",
+      "question": "Coś dla rozwoju? Porządek w domu?
+Spotkanie / telefon, Książka, Gitara, Mrówki"
     },
     "SEN": {
       "color":"#039d01",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "Kolacja, Kąpiel, Ułożenie rzeczy na swoich miejscach, modlitwa, książka",
+      "question": ""
     },
-    "FIRMA - ROZWOJ": {
+    "FIRMA - ROZWÓJ": {
       "color":"#6666fc",
-      "desc": "Multiline description",
-      "question": "Question"
+      "desc": "",
+      "question": "Co ograniczy jakieś działania powtarzane.
+"
     },
-    }
+}
 background: "#000000"
 
 
 ---
 header: "Plan dnia - Normalny"
 hours: [
-        {"hour": "05", "text": "PRZYGOTOWANIE"},
+        {"hour": "05", "text": "PRZYGOTOWANIE RANO"},
         {"hour": "06", "text": "FIRMA"},
         {"hour": "07", "text": "FIRMA"},
         {"hour": "08", "text": "PRACA i Obiad"},
@@ -91,7 +100,7 @@ hours: [
         {"hour": "19", "text": "DZHK"},
         {"hour": "20", "text": "FIRMA"},
         {"hour": "21", "text": "FIRMA"},
-        {"hour": "22", "text": "PRZYGOTOWANIE"},
+        {"hour": "22", "text": "PRZYGOTOWANIE WIECZOR"},
         {"hour": "23", "text": "SEN"},
         {"hour": "00", "text": "SEN"},
         {"hour": "01", "text": "SEN"},
@@ -106,7 +115,7 @@ hours: [
         {"hour": "06", "text": "SEN"},
         {"hour": "07", "text": "SEN"},
         {"hour": "08", "text": "SEN"},
-        {"hour": "09", "text": "PRZYGOTOWANIE"},
+        {"hour": "09", "text": "PRZYGOTOWANIE RANO"},
         {"hour": "10", "text": "FIRMA"},
         {"hour": "11", "text": "FIRMA"},
         {"hour": "12", "text": "FIRMA"},
@@ -122,7 +131,7 @@ hours: [
         {"hour": "22", "text": "DZHK"},
         {"hour": "23", "text": "DZHK"},
         {"hour": "00", "text": "DZHK"},
-        {"hour": "01", "text": "PRZYGOTOWANIE"},
+        {"hour": "01", "text": "PRZYGOTOWANIE WIECZOR"},
         {"hour": "02", "text": "SEN"},
         {"hour": "03", "text": "SEN"},
         {"hour": "04", "text": "SEN"}]
@@ -134,14 +143,14 @@ hours: [
         {"hour": "06", "text": "SEN"},
         {"hour": "07", "text": "SEN"},
         {"hour": "08", "text": "SEN"},
-        {"hour": "09", "text": "PRZYGOTOWANIE"},
-        {"hour": "10", "text": "FIRMA - ROZWOJ"},
-        {"hour": "11", "text": "FIRMA - ROZWOJ"},
-        {"hour": "12", "text": "FIRMA - ROZWOJ"},
-        {"hour": "13", "text": "FIRMA - ROZWOJ"},
-        {"hour": "14", "text": "FIRMA - ROZWOJ"},
-        {"hour": "15", "text": "FIRMA - ROZWOJ"},
-        {"hour": "16", "text": "FIRMA - ROZWOJ"},
+        {"hour": "09", "text": "PRZYGOTOWANIE RANO"},
+        {"hour": "10", "text": "FIRMA - ROZWÓJ"},
+        {"hour": "11", "text": "FIRMA - ROZWÓJ"},
+        {"hour": "12", "text": "FIRMA - ROZWÓJ"},
+        {"hour": "13", "text": "FIRMA - ROZWÓJ"},
+        {"hour": "14", "text": "FIRMA - ROZWÓJ"},
+        {"hour": "15", "text": "FIRMA - ROZWÓJ"},
+        {"hour": "16", "text": "FIRMA - ROZWÓJ"},
         {"hour": "17", "text": "SPRZATANIE/OBIAD/ODPOCZYNEK"},
         {"hour": "18", "text": "DZHK"},
         {"hour": "19", "text": "DZHK"},
@@ -150,7 +159,7 @@ hours: [
         {"hour": "22", "text": "DZHK"},
         {"hour": "23", "text": "DZHK"},
         {"hour": "00", "text": "DZHK"},
-        {"hour": "01", "text": "PRZYGOTOWANIE"},
+        {"hour": "01", "text": "PRZYGOTOWANIE WIECZOR"},
         {"hour": "02", "text": "SEN"},
         {"hour": "03", "text": "SEN"},
         {"hour": "04", "text": "SEN"}]

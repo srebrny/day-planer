@@ -1,17 +1,30 @@
 ---
-
 name: {
  text: "Nazwa całego planu",
  background: "#00ccff",
- pos: [10, 50],
+ color: "#ff00f0",
+ justify: True,
+ pos: [-10, -10],
  margins: {
      "left": 20,
      "top": 20,
-     "right": 30,
-     "bottom": 50
-   }
+     "right": 35, # size x
+     "bottom": 0 # size y fix it!
+ }
 }
 
+showProcedureTable: True
+procedureTable: {
+  pos: [20, 600],
+  color: "#ff00f0",
+  background: "#00cc00",
+  margins: {
+     "left": 0,
+     "top": 20,
+     "right": 35, # size x
+     "bottom": 0 # size y fix it!
+   }
+}
 
 margins: "For feature things"
 hour_start: 5 # in 24 hour system
@@ -19,13 +32,41 @@ hour_start: 5 # in 24 hour system
 # Lists of all procedures
 #
 procedures: {
-    "PRZYGOTOWANIE": "#00ccff",
-    "FIRMA": "#6666fc","#00ccff",
-    "PRACA i Obiad": "#ff3299",
-    "SPRZATANIE/OBIAD/ODPOCZYNEK": "#013461",
-    "DZHK": "#ff9899",
-    "SEN": "#039d01",
-    "FIRMA - ROZWOJ": "#6666fc",
+    "PRZYGOTOWANIE": {
+      "color":"#00ccff",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
+    "FIRMA": {
+      "color":"#6666fc",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
+    "PRACA i Obiad":{
+      "color": "#ff3299",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
+    "SPRZATANIE/OBIAD/ODPOCZYNEK": {
+      "color":"#013461",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
+    "DZHK": {
+      "color":"#ff9899",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
+    "SEN": {
+      "color":"#039d01",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
+    "FIRMA - ROZWOJ": {
+      "color":"#6666fc",
+      "desc": "Multiline description",
+      "question": "Question"
+    },
     }
 background: "#000000"
 
